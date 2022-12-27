@@ -26,6 +26,7 @@ async function fetchData(urlApi) {
             }
             return `
               <div class="group relative">
+              <a href=${video.url} target="_blank">
                 <div
                   class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
                   <img src="${video.bestThumbnail.url}" alt="${video.description}" class="w-full">
@@ -36,6 +37,7 @@ async function fetchData(urlApi) {
                     ${video.title}
                   </h3>
                 </div>
+              </a>
               </div>
             `;
           }).slice(0, 5).join('')}
